@@ -1,0 +1,20 @@
+{
+  "include": ["./**/*.(ts|tsx)", "./.d.ts"],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "es5",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "sourceMap": true,
+  },
+  "files": ["src/index.tsx"],
+  "paths": {
+    "@/*": ["src/*"],
+  }
+
+}

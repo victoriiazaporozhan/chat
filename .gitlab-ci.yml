@@ -1,0 +1,26 @@
+image: node:18
+
+cache:
+  paths:
+    - node_modules
+
+before_script:
+  - npm install
+
+stages:
+  - lint
+  - build
+
+build:
+  stage: build
+  script:
+    - npm run build
+  only:
+    - merge_requests
+
+lint:
+  stage: lint
+  only:
+    - merge_requests
+  script:
+    - npm run lint:fix

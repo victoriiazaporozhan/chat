@@ -15,7 +15,7 @@ const config = {
   },
   devServer: {
     open: true,
-    host: "localhost",
+    host: "0.0.0.0",
     static: "./dist",
     port: 3000
   },
@@ -46,10 +46,17 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
   },
 };
 

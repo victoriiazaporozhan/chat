@@ -1,2 +1,9 @@
 @import "variables";
 @import "global";
+@import "layout";
+
+// pages
+@import "./pages/LoginPage.scss";
+
+// components
+@import "./components/LoginButtons.scss";

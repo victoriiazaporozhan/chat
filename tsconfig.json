@@ -1,5 +1,5 @@
 {
-  "include": ["./**/*.(ts|tsx)", "./.d.ts"],
+  "include": ["./**/*.(ts|tsx)", ".d.ts", "./src/**/*"],
   "compilerOptions": {
     "outDir": "./dist/",
     "allowSyntheticDefaultImports": true,

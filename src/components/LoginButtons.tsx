@@ -9,7 +9,6 @@ interface Props {
 }
 
 export const LoginButtons: FC<Props> = ({ googleLoginHandler, appleLoginHandler}) => {
-  console.log('blabla');
   return (
     <div className="login-buttons">
       <Button

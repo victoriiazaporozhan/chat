@@ -1,11 +1,14 @@
 import { ThemeProvider } from "@mui/material/styles";
+import { Routes, Route } from "react-router-dom";
 import { theme } from './constants/theme';
-import { LoginPage } from "./pages/LoginPage";
+import { routes } from "./constants/routes";
 
 import "./styles/main.scss";
 
 export const App = () => (
   <ThemeProvider theme={theme}>
-    <LoginPage />
+    <Routes>
+      {routes.map(({path, element}) => <Route key={path} path={path} element={element} />)}
+    </Routes>
   </ThemeProvider>
 );
